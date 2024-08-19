@@ -7,3 +7,8 @@ Lumina is the ultimate mobile app for astronomy enthusiasts, combining precise w
 + Current Weather and Moon Phase Information Display
 + Celestial Events Calendar
 + Nearby Stargazing Sites based on Weather, Moon, and Bortle Scale Information
+
+# Stretch Goals ⌛
++ Fully Built-In Map Highlighting Best Stargazing Locations
++ Navigation Capabilities to Optimal Sites
++ Social Features Allowing Users to Plan and Share Trips with Other People
