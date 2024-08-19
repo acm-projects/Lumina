@@ -31,6 +31,6 @@ Lumina is the ultimate mobile app for astronomy enthusiasts, combining precise w
 ## 👨‍💻 Tech Stack
 + React Native
 + Auth0
-+ NodeJS + ExpressJS
++ ExpressJS
 + AWS EC2
 + AWS DynamoDB
