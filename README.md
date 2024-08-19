@@ -26,4 +26,4 @@ Lumina is the ultimate mobile app for astronomy enthusiasts, combining precise w
 |7| ... Coding ... | **Finish Data Points Coding** |
 |8| **Integrations** | **Integrations** |
 |9| Create Presentation Slides | Finish up Remaining Integrations |
-|10| **Present** | **Present** |
+|10| **Practice + Present** | **Practice + Present** |
