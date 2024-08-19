@@ -19,13 +19,15 @@ Lumina is the ultimate mobile app for astronomy enthusiasts, combining precise w
 |--- | --- | --- |
 |1| Start Initial Wireframes and Mockups| Introduce Backend Stack and APIs|
 |2| **Finalize Design and Style**| Begin work on Bortle Scale API |
-|3| Assign App Sections and Start Coding| Start authentication backend |
-|4| ... Coding ... |**Finish Bortle Scale API**|
-|5| ... Coding ... |**Finish Authentication**|
-|6| ... Coding ... |Start Weather + Moon + Celestial Events Data Ingestion |
+|3| Assign App Sections and Start Authentication | Start Weather + Moon + Celestial Events Data Ingestion|
+|4| ... Coding ... |... Coding ... |
+|5| ... Coding ... |... Coding ... |
+|6| ... Coding ... |**Finish Bortle Scale API** |
 |7| ... Coding ... | **Finish Data Points Coding** |
 |8| **Integrations** | **Integrations** |
 |9| Create Presentation Slides | Finish up Remaining Integrations |
 |10| **Practice + Present** | **Practice + Present** |
 
 ## 👨‍💻 Tech Stack
++ hi
+  + hello
