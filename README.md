@@ -29,8 +29,10 @@ Lumina is the ultimate mobile app for astronomy enthusiasts, combining precise w
 |10| **Practice + Present** | **Practice + Present** |
 
 ## 👨‍💻 Tech Stack
-+ React Native
-+ Auth0
-+ ExpressJS
-+ AWS ECS + Fargate
-+ AWS DynamoDB
++ [React Native](https://www.youtube.com/watch?v=0-S5a0eXPoc&t=878s)
++ [Native Wind](https://www.nativewind.dev/)
++ [Auth0](https://auth0.com/docs/quickstart/native/react-native/00-login) 
++ [ExpressJS]
++ [AWS ECS]
++ [AWS Fargate]
++ [AWS DynamoDB] 
