@@ -15,9 +15,9 @@ Lumina is the ultimate mobile app for astronomy enthusiasts, combining precise w
 + Augemented Reality Viewing
 
 ## 📅 Milestones
-| Week | Tasks | Frontend | Backend |
-|--- | --- | --- | --- |
-|1|
+| Week | Frontend | Backend |
+|--- | --- | --- |
+|1| Organize Meeting Times and assign Teams|
 |2|
 |3|
 |4|
