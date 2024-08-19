@@ -27,3 +27,5 @@ Lumina is the ultimate mobile app for astronomy enthusiasts, combining precise w
 |8| **Integrations** | **Integrations** |
 |9| Create Presentation Slides | Finish up Remaining Integrations |
 |10| **Practice + Present** | **Practice + Present** |
+
+## 👨‍💻 Tech Stack
