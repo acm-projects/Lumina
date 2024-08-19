@@ -32,7 +32,9 @@ Lumina is the ultimate mobile app for astronomy enthusiasts, combining precise w
 + [React Native](https://www.youtube.com/watch?v=0-S5a0eXPoc&t=878s)
 + [Native Wind](https://www.nativewind.dev/)
 + [Auth0](https://auth0.com/docs/quickstart/native/react-native/00-login) 
-+ [ExpressJS]
-+ [AWS ECS]
-+ [AWS Fargate]
-+ [AWS DynamoDB] 
++ [ExpressJS](https://www.youtube.com/watch?v=SccSCuHhOw0&t=1776s)
++ [AWS ECS](https://www.youtube.com/watch?v=I9VAMGEjW-Q)
++ [AWS Fargate](https://www.youtube.com/watch?v=yi22xrvPnPk)
++ [AWS DynamoDB](https://www.youtube.com/watch?v=2k2GINpO308)
+[!NOTE]
++ only if we have time -> [GitHub Actions - CI/CD Pipeline](https://www.youtube.com/watch?v=t-9lWdZcrQM)
