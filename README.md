@@ -17,8 +17,8 @@ Lumina is the ultimate mobile app for astronomy enthusiasts, combining precise w
 ## 📅 Milestones
 | Week | Frontend | Backend |
 |--- | --- | --- |
-|1| Organize Meeting Times and assign Teams|
-|2|
+|1| Start Initial Wireframes and Mockups| Learn Backend Stack and APIs|
+|2| Finalize Design and Style | Begin work on Bortle Scale API |
 |3|
 |4|
 |5|
