@@ -36,12 +36,11 @@ Lumina is the ultimate mobile app for astronomy enthusiasts, combining precise w
 + [AWS ECS](https://www.youtube.com/watch?v=I9VAMGEjW-Q)
 + [AWS Fargate](https://www.youtube.com/watch?v=yi22xrvPnPk)
 + [AWS DynamoDB](https://www.youtube.com/watch?v=2k2GINpO308)
-+ [GitHub Actions - CI/CD Pipeline](https://www.youtube.com/watch?v=t-9lWdZcrQM)
 
 ## 🤝 The Team
 + Frontend
-  + tbd
-  + tbd
+  + Mercedes Xiong
+  + Shriya Kalyan
 + Backend
-  + tbd
-  + tbd
+  + Bilal Tulek
+  + Tanishq Akasapu
