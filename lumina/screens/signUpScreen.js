@@ -4,10 +4,8 @@ import { StyleSheet, Text, View, Button, SafeAreaView, Image, TouchableOpacity, 
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-//import { NavigationContainer } from '@react-navigation/native';
-//import LoginScreeen from "../lumina/screens/loginScreen";
+import ExistingAccount from '../buttons/sign-up/existing_account_button';
 
-//const Stack = createNativeStackNavigator();
 
 export default function App({navigation}) {
   const [form, setForm] = useState({
@@ -59,15 +57,13 @@ export default function App({navigation}) {
           <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="City, State"/>
          </View>
 
+
          <View style={styles.signUpContainer}>
           <Text style={styles.signUp}>Sign Up</Text>
          </View>
 
-         <Button title="Already have an account? Login" onPress={() => navigation.navigate("login")}>
-         {/* <View>
-          <Text style={styles.alreadyAccount}>Already have an account? <Text style={styles.login}>Login</Text></Text>
-         </View> */}
-        </Button>
+         <ExistingAccount text="Already have an account? Login" onPress={() => navigation.navigate("login")}/>
+
       </SafeAreaView>
     </ImageBackground>
 
@@ -151,6 +147,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 15,
+  },
+  loginStyle: {
+    marginTop: 40,
   },
   /**Already have an account */
   alreadyAccount: {

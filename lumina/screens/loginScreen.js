@@ -2,8 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, Button, SafeAreaView, Image, TouchableOpacity, TextInput, ImageBackground, Touchable} from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginButton from '../buttons/login/login_button';
+import NoAccountButton from '../buttons/login/no_account_button';
 
-export default function App() {
+export default function App({navigation}) {
     const [form, setForm] = useState({
       email:'',
       username:'',
@@ -13,27 +16,37 @@ export default function App() {
   });
 
   return (
-    <ImageBackground source={require("../assets/LoginPage.jpeg")}
+    <ImageBackground source={require("../assets/signUpBackground.png")}
     style={styles.container}>
       <SafeAreaView>
-        <View>
-          <Text style={styles.title}>Login</Text>
-          <Text style={styles.subtitle}>Enter your email and password to login.</Text>
+       <View>
+         <Text style={styles.title}>Welcome Back</Text>
+         <Text style={styles.subtitle}>Please login to continue.</Text>
+       </View>
+
+       <View>
+         <Text style={styles.emailTitle}>Email</Text>
+         <View style={styles.inputContainer}>
+           <Image style={styles.usernameIcon} source={require('../assets/icons8-person-24.png')}/>
+           <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="Username"/>
+         </View>
+       </View>
+
+       <View>
+         <Text style={styles.passwordTitle}>Password</Text>
+         <View style={styles.inputContainer}>
+           <Image style={styles.usernameIcon} source={require('../assets/icons8-person-24.png')}/>
+           <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="Username"/>
+         </View>
+        </View>
+        
+        <View style={{marginLeft: 'auto', marginRight: 20, marginTop: 20}}>
+          <Text style={styles.subtitle}>Forgot password?</Text>
         </View>
 
-        <View>
-          <Text style={styles.emailTitle}>Email</Text>
-          <View style={styles.inputContainer}>
-            <Image style={styles.usernameIcon} source={require('../assets/icons8-person-24.png')}/>
-            <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="Username"/>
-          </View>
-        </View>
-
-        <View>
-          <Text style={styles.passwordTitle}>Password</Text>
-
-        </View>
-
+        <LoginButton text="login" style={{marginLeft: 500}} onPress={() => navigation.navigate("homeScreen")}/>
+        
+        <NoAccountButton text="Don't have an account? Sign Up" onPress={() => navigation.navigate("signUp")}/>
 
       </SafeAreaView>
     </ImageBackground>
@@ -72,7 +85,7 @@ const styles = StyleSheet.create({
   },
   /** Form Titles */
   emailTitle: {
-    marginTop: 20,
+    marginTop: 40,
     color: 'white',
     marginLeft: 20,
     fontWeight: 'bold',
@@ -136,7 +149,6 @@ const styles = StyleSheet.create({
   inputContainer: {
     marginTop: 10,
     backgroundColor: 'white',
-    opacity: 0.1,
     flexDirection: 'row',
     borderRadius: 10,
     marginHorizontal: 20,
@@ -154,6 +166,18 @@ const styles = StyleSheet.create({
   textInput: {
     flex: 1,
     marginLeft: 10,
+  },
+  loginBox: {
+    marginTop: 10,
+    backgroundColor: '#7D62A9',
+    opacity: 1,
+    flexDirection: 'row',
+    borderRadius: 10,
+    marginHorizontal: 20,
+    elevation: 10,
+    marginaVertical: 20,
+    alignItems: 'right',
+    height: 50,
   },
   /** Button */
   btn: {
@@ -173,3 +197,55 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
 });
+
+// export default function App({navigation}) {
+//   const [form, setForm] = useState({
+//     email:'',
+//     username:'',
+//     password:'',
+//     city:'',
+//     state:'',
+// });
+
+// return (
+//   <ImageBackground source={require("../assets/signUpBackground.png")}
+//   style={styles.container}>
+//     <SafeAreaView>
+//       <View>
+//         <Text style={styles.title}>Login</Text>
+//         <Text style={styles.subtitle}>Enter your email and password to login.</Text>
+//       </View>
+
+//       <View>
+//         <Text style={styles.emailTitle}>Email</Text>
+//         <View style={styles.inputContainer}>
+//           <Image style={styles.usernameIcon} source={require('../assets/icons8-person-24.png')}/>
+//           <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="Username"/>
+//         </View>
+//       </View>
+
+//       <View>
+//         <Text style={styles.passwordTitle}>Password</Text>
+//         <View style={styles.inputContainer}>
+//           <Image style={styles.usernameIcon} source={require('../assets/icons8-person-24.png')}/>
+//           <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="Username"/>
+//         </View>
+//       </View>
+
+//       <Button style={styles.loginStyle} title="Don't have an account? Sign Up" onPress={() => navigation.navigate("homeScreen")}>
+//        { <View>
+//         <Text style={styles.alreadyAccount}>Already have an account? <Text style={styles.login}>Login</Text></Text>
+//        </View> }
+//       </Button>
+
+//       <Button style={styles.loginStyle} title="Don't have an account? Sign Up" onPress={() => navigation.navigate("signUp")}>
+//        { <View>
+//         <Text style={styles.alreadyAccount}>Already have an account? <Text style={styles.login}>Login</Text></Text>
+//        </View> }
+//       </Button>
+
+
+//     </SafeAreaView>
+//   </ImageBackground>
+// );
+// };
