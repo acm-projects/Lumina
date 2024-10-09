@@ -4,17 +4,18 @@ import { FlatList, StyleSheet, Text, View, Button, SafeAreaView, Image, Touchabl
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import EventButton from '../buttons/event/eventButton';
+import StarGazingCarousel from '../buttons/event/stargazingCarousel';
+import PlanetCarousel from '../buttons/event/planetCarousel';
+import LunarSolarCarousel from '../buttons/event/lunar_solarCarousel';
+import { starEvents } from '../assets/stargazing';
+import { planetEvents } from '../assets/planets';
 
 export default function App({navigation}) {
-  const data = [{name: "bob"}, {name: "sarah"}];
-  
-  const [starEvents, setStarEvents] =  useState([
-    {host: 'University of Texas at Arlington', name: 'Texas Stargazing', destination: 'UTA Planetarium', day: '21', month: 'Sep'}
-  ]);
 
   return (
       <ImageBackground source={require("../assets/EventBackground.jpeg")} style={styles.container}>
       <SafeAreaView>
+      <ScrollView>
         <View>
           <Text style={styles.title}>Events</Text>
         </View>
@@ -27,64 +28,38 @@ export default function App({navigation}) {
         </View>
 
         <View>
-          <Text style={styles.subTitle}>STARGAZING</Text>
+          <Text style={{
+              marginTop: 20,
+              fontSize: 20,
+              color: 'white',
+              marginLeft: 20,
+          }}>STARGAZING</Text>
 
-          <FlatList
-            data={data}
-            numColumns={2}
-            columnWrapperStyle={{gap: 10, paddingHorizontal: 12}}
-            contentContainerStyle={{gap: 10, paddingBottom: 20}}
-            keyExtractor={(item, idx) => item.name + idx}
-            showsVerticalScrollIndicator={false}
-            renderItem={({item}) => {
-              return (
-                <TouchableOpacity 
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    flexxDirection: "row",
-                    backgroundColor: "#6b7280",
-                    flex: 1,
-                    height: 200,
-                    borderRadius: 20,
-                  }}>
-                    <Text style={{color: "white"}}>{item.name}</Text>
-                  </TouchableOpacity>
-              );
-            }}
-            ListHeaderComponentStyle={{marginVertical: 10}}
-            ListHeaderComponent={()=>(
-              <View>
-                <FlatList>
-                  horizontal={true}
-                  style={{ paddingVertical: 5}}
-                </FlatList>
-              </View>
-            )}
-          />
-          
-          <FlatList>
-            data={starEvents}
-            
-            renderItem={({item}) => (
-              <Text style={styles.item}>{item.name}</Text>
-            )}
-          </FlatList>
-
+          <StarGazingCarousel list={starEvents}/>
         </View>
 
         <View>
-          <Text style={styles.subTitle}>PLANETS</Text>
+          <Text style={{
+              fontSize: 20,
+              color: 'white',
+              marginLeft: 20,
+          }}>PLANETS</Text>
+          <PlanetCarousel list={planetEvents}/>
         </View>
 
         <View>
-          <Text style={styles.subTitle}>LUNAR/SOLAR</Text>
+          <Text style={{
+            fontSize: 20,
+            color: 'white',
+            marginLeft: 20,
+          }}>LUNAR/SOLAR</Text>
+
+          <LunarSolarCarousel list={starEvents}/>
         </View>
 
-        <EventButton text="Don't have an account? Sign Up" onPress={() => navigation.navigate("signUp")}/>
+        <EventButton text="Return to sign up" onPress={() => navigation.navigate("signUp")}/>
 
-
+        </ScrollView>
       </SafeAreaView>
     </ImageBackground>
   );
