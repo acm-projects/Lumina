@@ -1,6 +1,6 @@
 export const handler = async (event) => {
   
-  let key = process.env.apiKey;
+  let key = process.env.newsKey;
   
   const url = new URL('https://newsapi.org/v2/everything?q=astronomy&sortBy=relevancy');
   url.searchParams.append('apiKey', key);

@@ -1,16 +1,16 @@
 export const handler = async (event) => {
-    
-    let cityName = 'Richardson'
-    const API_KEY = "a3b415a983f17cfeff09a02bc2d97669"
+  let cityName = event.cityName;
+
+  let key = process.env.weatherKey
 
     // GeoLocator API call
     const geoLocatorURL = new URL("http://api.openweathermap.org/geo/1.0/direct");
     geoLocatorURL.searchParams.append('q', cityName);
-    geoLocatorURL.searchParams.append('appid', API_KEY);
+    geoLocatorURL.searchParams.append('appid', key);
 
     //Weather API call
     const weatherURL = new URL("https://api.openweathermap.org/data/3.0/onecall");
-    weatherURL.searchParams.append('appid', API_KEY);
+    weatherURL.searchParams.append('appid', key);
 
     try {
       const response = await fetch(geoLocatorURL, {
@@ -60,6 +60,4 @@ export const handler = async (event) => {
         body : JSON.stringify({ message: "Error making location call.", details: error.message }),
       }
     }
-  };
-
-  console.log(handler());
+};
