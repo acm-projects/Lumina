@@ -9,6 +9,8 @@ import PlanetCarousel from '../buttons/event/planetCarousel';
 import LunarSolarCarousel from '../buttons/event/lunar_solarCarousel';
 import { starEvents } from '../assets/stargazing';
 import { planetEvents } from '../assets/planets';
+import { lunarAndSolarEvents } from '../assets/lunarAndSolar';
+import BottomNavBar from '../buttons/bottomNavBar';
 
 export default function App({navigation}) {
 
@@ -54,11 +56,10 @@ export default function App({navigation}) {
             marginLeft: 20,
           }}>LUNAR/SOLAR</Text>
 
-          <LunarSolarCarousel list={starEvents}/>
+          <LunarSolarCarousel list={lunarAndSolarEvents}/>
         </View>
 
         <EventButton text="Return to sign up" onPress={() => navigation.navigate("signUp")}/>
-
         </ScrollView>
       </SafeAreaView>
     </ImageBackground>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { FlatList, StyleSheet, Text, View, Button, SafeAreaView, Image, TouchableOpacity, TextInput, ImageBackground, ScrollView} from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/native';
-const CARD_WIDTH = 275;
-const CARD_HEIGHT = 200;
+const CARD_WIDTH = 350;
+const CARD_HEIGHT = 150;
 
-const PlanetCarousel = ({list}) => {
+const MonthEventsCarousel = ({list}) => {
     const navigation = useNavigation();
     return (
         <FlatList
@@ -12,9 +13,9 @@ const PlanetCarousel = ({list}) => {
             ListHeaderComponent={() => (
               <View>
                 <FlatList
-                  horizontal={true}
+                  vertical={true}
                   style={{ paddingVertical: 10}}
-                  showsHorizontalScrollIndicator={false}
+                  showsVerticalScrollIndicator={false}
                   contentContainerStyle={{gap: 40, paddingHorizontal: 20}}
                   data={list}
                   keyExtractor={(item, idx) => item + idx}
@@ -24,29 +25,31 @@ const PlanetCarousel = ({list}) => {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        flexDirection: "row",
-                        backgroundColor: "white",
+                        flexDirection: "column",
+                        backgroundColor: "#7D66B3",
                         borderRadius: 20,
+                        width: CARD_WIDTH,
+                        height: CARD_HEIGHT,
+                        marginBottom: 20,
+                        marginLeft: 20,
+                        opacity: 1.0,
                       }}
-
+                      
                       onPress={() => 
-                        navigation.navigate('EventDetailsScreen', {trip: item})
+                        navigation.navigate('EventDetailsCalendarScreen', {trip: item})
                       }
                     >
                       <View style={styles.card}>
                         <View style = {styles.imageBox}>
                           <Image source={item.image} style={styles.image}/>
                         </View>
-                        <View style={styles.dateBox}>
-                          <Text style={styles.dayText}>{item.day}</Text>
-                          <Text style={styles.monthText}>{item.month}</Text>
-                        </View>
                         <View style={styles.titleBox}>
-                          <Text style={styles.hostText}>{item.host}</Text>
                           <Text style={styles.title}>{item.name}</Text>
-                          <Text style={styles.locationText}>{item.location}</Text>
+                          <Text style={styles.hostText}>{item.host}</Text>
+                          <Text style={styles.locationText}>{item.address}</Text>
                         </View>
                       </View>
+                      
                     </TouchableOpacity>
                     )}
                 />
@@ -56,41 +59,55 @@ const PlanetCarousel = ({list}) => {
         );
 };
 
+export default MonthEventsCarousel;
+
+// export default function StarGazingCarousel({text, navigation, onPress}) {
+//   return (
+//       <TouchableOpacity onPress={onPress}>
+//         <Text style={styles.buttonText}>{ text }</Text>
+//       </TouchableOpacity>
+//   )
+// }
+
 const styles = StyleSheet.create({
   card: {
     width: CARD_WIDTH,
     height: CARD_HEIGHT,
   },
   imageBox: {
-    width: CARD_WIDTH,
+    width: 150,
     height: CARD_HEIGHT,
-    borderRadius: 20,
+    borderTopRightRadius: 20,
+    borderBottomRightRadius: 20,
     overflow: 'hidden',
+    marginLeft: 200,
   },
   image: {
     height: CARD_HEIGHT,
-    width: CARD_WIDTH,
+    width: 150,
     resizeMode: 'cover',
+    alignSelf: 'center',
   },
   titleBox: {
     position: 'absolute',
-    bottom: 20,
-    left: 10,
+    top: 20,
+    left: 20,
+    width: 170,
   },
   title: {
-    fontSize: 25,
+    fontSize: 20,
     fontWeight: '700',
     color: "white",
     letterSpacing: 2,
   },
   hostText: {
     fontSize: 13,
-    fontWeight: '700',
+    fontWeight: '500',
     color: "white",
   },
   locationText: {
     fontSize: 10,
-    fontWeight: '900',
+    fontWeight: '500',
     color: "white",
     letterSpacing: 2,
   },
@@ -116,5 +133,3 @@ const styles = StyleSheet.create({
     color: '#8C70B6',
   },
 });
-
-export default PlanetCarousel;

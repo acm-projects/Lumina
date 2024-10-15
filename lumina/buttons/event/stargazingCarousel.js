@@ -1,10 +1,12 @@
 import React from 'react';
 import { FlatList, StyleSheet, Text, View, Button, SafeAreaView, Image, TouchableOpacity, TextInput, ImageBackground, ScrollView} from 'react-native';
-
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useNavigation } from '@react-navigation/native';
 const CARD_WIDTH = 275;
 const CARD_HEIGHT = 200;
 
 const StarGazingCarousel = ({list}) => {
+    const navigation = useNavigation();
     return (
         <FlatList
             ListHeaderComponentStyle={{marginVertical: 10}}
@@ -27,6 +29,10 @@ const StarGazingCarousel = ({list}) => {
                         backgroundColor: "white",
                         borderRadius: 20,
                       }}
+                      
+                      onPress={() => 
+                        navigation.navigate('EventDetailsScreen', {trip: item})
+                      }
                     >
                       <View style={styles.card}>
                         <View style = {styles.imageBox}>
@@ -51,6 +57,16 @@ const StarGazingCarousel = ({list}) => {
           />
         );
 };
+
+export default StarGazingCarousel;
+
+// export default function StarGazingCarousel({text, navigation, onPress}) {
+//   return (
+//       <TouchableOpacity onPress={onPress}>
+//         <Text style={styles.buttonText}>{ text }</Text>
+//       </TouchableOpacity>
+//   )
+// }
 
 const styles = StyleSheet.create({
   card: {
@@ -112,5 +128,3 @@ const styles = StyleSheet.create({
     color: '#8C70B6',
   },
 });
-
-export default StarGazingCarousel;

@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, Text, View, Image} from 'react-native';
 
-export default function EventButton({text, navigation, onPress}) {
+export default function CalendarButton({text, navigation, onPress}) {
     return(
         <TouchableOpacity onPress={onPress}>
-            <Text style={styles.buttonText}>{ text }</Text>
+            <Image style={styles.imageStyle} source={require("/Users/thebenzsecrets/Desktop/Lumina/lumina/assets/navigationIcons/unfilledIcons/icons8-calendar-48 (3).png")}/>
         </TouchableOpacity>
     )
 }
@@ -27,5 +27,9 @@ const styles = StyleSheet.create( {
         lineHeight: 26,
         fontWeight: '600',
         color: '#fff',
+    },
+    imageStyle: {
+        height: 40,
+        width: 40,
     }
 })

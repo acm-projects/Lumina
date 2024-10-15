@@ -1,34 +1,28 @@
-import { BottomTabBar } from '@react-navigation/bottom-tabs';
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, Button, SafeAreaView, Image, TouchableOpacity, TextInput, ImageBackground, Touchable} from 'react-native';
+import NavigationBar from '../buttons/NavigationBar/navigationBar';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import BottomNavBar from '../buttons/bottomNavBar';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export default function App({navigation}) {
-    const [form, setForm] = useState({
-      email:'',
-      username:'',
-      password:'',
-      city:'',
-      state:'',
-  });
 
   return (
     <ImageBackground source={require("../assets/HomePageBackground.png")}
     style={styles.container}>
       <SafeAreaView>
         <View>
-          <Text style={styles.title}>HOMESCREEN</Text>
+          <Text style={styles.title}>TrackerScreen</Text>
           <Text style={styles.subtitle}>Enter your email and password to login.</Text>
         </View>
 
         <Button style={styles.loginStyle} title="Go to Event" onPress={() => navigation.navigate("eventScreen")}/>
         <Button style={styles.loginStyle} title="Go to Calendaar" onPress={() => navigation.navigate("calendarScreen")}/>
-        <BottomNavBar navigation={navigation}/>
+        <NavigationBar/>
+
       </SafeAreaView>
     </ImageBackground>
-  )
+  );
 };
 
 const styles = StyleSheet.create({

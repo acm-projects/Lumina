@@ -5,6 +5,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ExistingAccount from '../buttons/sign-up/existing_account_button';
+import SignUpButton from '../buttons/sign-up/sign_up_button';
 
 
 export default function App({navigation}) {
@@ -57,10 +58,7 @@ export default function App({navigation}) {
           <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="City, State"/>
          </View>
 
-
-         <View style={styles.signUpContainer}>
-          <Text style={styles.signUp}>Sign Up</Text>
-         </View>
+          <SignUpButton text="Sign Up" style={{}} onPress={() => navigation.navigate("homeScreen")}/>
 
          <ExistingAccount text="Already have an account? Login" onPress={() => navigation.navigate("login")}/>
 

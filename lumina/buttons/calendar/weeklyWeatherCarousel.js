@@ -1,21 +1,20 @@
 import React from 'react';
 import { FlatList, StyleSheet, Text, View, Button, SafeAreaView, Image, TouchableOpacity, TextInput, ImageBackground, ScrollView} from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-const CARD_WIDTH = 275;
-const CARD_HEIGHT = 200;
 
-const PlanetCarousel = ({list}) => {
-    const navigation = useNavigation();
+const CARD_WIDTH = 75;
+const CARD_HEIGHT = 150;
+
+const WeatherCarousel = ({list}) => {
     return (
         <FlatList
-            ListHeaderComponentStyle={{marginVertical: 10}}
+            ListHeaderComponentStyle={{marginTop: 0}}
             ListHeaderComponent={() => (
               <View>
                 <FlatList
                   horizontal={true}
-                  style={{ paddingVertical: 10}}
+                  style={{ paddingVertical: 0}}
                   showsHorizontalScrollIndicator={false}
-                  contentContainerStyle={{gap: 40, paddingHorizontal: 20}}
+                  contentContainerStyle={{gap: 10, paddingHorizontal: 20}}
                   data={list}
                   keyExtractor={(item, idx) => item + idx}
                   renderItem={({item}) => (
@@ -25,26 +24,15 @@ const PlanetCarousel = ({list}) => {
                         justifyContent: "center",
                         alignItems: "center",
                         flexDirection: "row",
-                        backgroundColor: "white",
+                        backgroundColor: "transparent",
                         borderRadius: 20,
                       }}
-
-                      onPress={() => 
-                        navigation.navigate('EventDetailsScreen', {trip: item})
-                      }
                     >
                       <View style={styles.card}>
-                        <View style = {styles.imageBox}>
-                          <Image source={item.image} style={styles.image}/>
-                        </View>
-                        <View style={styles.dateBox}>
-                          <Text style={styles.dayText}>{item.day}</Text>
-                          <Text style={styles.monthText}>{item.month}</Text>
-                        </View>
                         <View style={styles.titleBox}>
-                          <Text style={styles.hostText}>{item.host}</Text>
-                          <Text style={styles.title}>{item.name}</Text>
-                          <Text style={styles.locationText}>{item.location}</Text>
+                          <Image style={styles.iconSettings}source={item.Image}/>
+                          <Text style={styles.degreeText}>{item.Degree}</Text>
+                          <Text style={styles.dayText}>{item.DayOfTheWeek}</Text>
                         </View>
                       </View>
                     </TouchableOpacity>
@@ -74,8 +62,8 @@ const styles = StyleSheet.create({
   },
   titleBox: {
     position: 'absolute',
-    bottom: 20,
-    left: 10,
+    marginTop: 30,
+    paddingHorizontal: 13,
   },
   title: {
     fontSize: 25,
@@ -88,11 +76,17 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: "white",
   },
-  locationText: {
-    fontSize: 10,
-    fontWeight: '900',
+  degreeText: {
     color: "white",
-    letterSpacing: 2,
+    alignSelf: "center",
+    fontSize: 20,
+  },
+  dayText: {
+    color: "white",
+    alignSelf: "center",
+    fontSize: 15,
+    marginTop: 5,
+    fontWeight: 'bold',
   },
   dateBox: {
     width: 60,
@@ -103,18 +97,10 @@ const styles = StyleSheet.create({
     right: 10,
     top: 10,
   },
-  dayText: {
-    top: 5,
-    textAlign: 'center',
-    fontWeight:'700',
-    fontSize: '30',
-    color: '#8C70B6', 
-
-  },
   monthText: {
     textAlign: 'center',
     color: '#8C70B6',
   },
 });
 
-export default PlanetCarousel;
+export default WeatherCarousel;
