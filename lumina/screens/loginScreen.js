@@ -6,6 +6,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginButton from '../buttons/login/login_button';
 import NoAccountButton from '../buttons/login/no_account_button';
 
+//Authentication
+
 export default function App({navigation}) {
     const [form, setForm] = useState({
       email:'',
@@ -44,7 +46,7 @@ export default function App({navigation}) {
           <Text style={styles.subtitle}>Forgot password?</Text>
         </View>
 
-        <LoginButton text="login" style={{marginLeft: 500}} onPress={() => navigation.navigate("homeScreen")}/>
+        <LoginButton text="login" style={{marginLeft: 500}} onPress={() => navigation.navigate('Tabs')} />
         
         <NoAccountButton text="Don't have an account? Sign Up" onPress={() => navigation.navigate("signUp")}/>
 

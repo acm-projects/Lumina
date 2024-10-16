@@ -3,7 +3,6 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, Button, SafeAreaView, Image, TouchableOpacity, TextInput, ImageBackground, Touchable} from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import BottomNavBar from '../buttons/bottomNavBar';
 
 export default function App({navigation}) {
     const [form, setForm] = useState({
@@ -20,12 +19,10 @@ export default function App({navigation}) {
       <SafeAreaView>
         <View>
           <Text style={styles.title}>HOMESCREEN</Text>
-          <Text style={styles.subtitle}>Enter your email and password to login.</Text>
         </View>
 
-        <Button style={styles.loginStyle} title="Go to Event" onPress={() => navigation.navigate("eventScreen")}/>
-        <Button style={styles.loginStyle} title="Go to Calendaar" onPress={() => navigation.navigate("calendarScreen")}/>
-        <BottomNavBar navigation={navigation}/>
+        {/* <Button style={styles.loginStyle} title="Go to Event" onPress={() => navigation.navigate("eventScreen")}/>
+        <Button style={styles.loginStyle} title="Go to Calendaar" onPress={() => navigation.navigate("calendarScreen")}/> */}
       </SafeAreaView>
     </ImageBackground>
   )

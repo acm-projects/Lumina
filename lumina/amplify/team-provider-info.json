@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lumina-dev-65c8b-authRole",
+      "UnauthRoleArn": "arn:aws:iam::761018869308:role/amplify-lumina-dev-65c8b-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::761018869308:role/amplify-lumina-dev-65c8b-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lumina-dev-65c8b-deployment",
+      "UnauthRoleName": "amplify-lumina-dev-65c8b-unauthRole",
+      "StackName": "amplify-lumina-dev-65c8b",
+      "StackId": "arn:aws:cloudformation:us-east-1:761018869308:stack/amplify-lumina-dev-65c8b/1d5764a0-8b3c-11ef-84a0-1266fe2aa469",
+      "AmplifyAppId": "d2xnks2l8gyha8"
+    }
+  }
+}

@@ -10,7 +10,6 @@ import LunarSolarCarousel from '../buttons/event/lunar_solarCarousel';
 import { starEvents } from '../assets/stargazing';
 import { planetEvents } from '../assets/planets';
 import { lunarAndSolarEvents } from '../assets/lunarAndSolar';
-import BottomNavBar from '../buttons/bottomNavBar';
 
 export default function App({navigation}) {
 

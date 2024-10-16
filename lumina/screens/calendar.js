@@ -8,21 +8,22 @@ import EventButton from '../buttons/event/eventButton';
 import RNCalendar from '../buttons/calendar/RNCalendar';
 import { MonthlyEvents } from '../assets/monthlyEvents';
 import MonthEventsCarousel from '../buttons/calendar/MonthEventsCarousel';
-import GoToWeek from '../buttons/calendar/GoToWeek';
-import BottomNavBar from '../buttons/bottomNavBar';
+import GoToWeek from '/Users/thebenzsecrets/Desktop/Lumina/lumina/buttons/calendar/GoToWeek.js';
+import getDaysInMonth from 'react-native-calendars/src/calendar/day';
 
 export default function App({navigation}) {
-
+  const daysInMonth = getDaysInMonth.getDaysInMonth();
+  
   return (
-      <ImageBackground source={require("../assets/EventBackground.jpeg")} style={styles.container}>
+      <ImageBackground source={require("/Users/thebenzsecrets/Desktop/Lumina/lumina/assets/calendarPhotos/31AD543C-39F9-4AB5-AF7C-902A3B99310D.jpeg")} style={styles.container}>
+      <Text style={styles.title}>{daysInMonthß}</Text>
+      <ScrollView>
       <SafeAreaView>
-        <ScrollView>
         <View>
           <View style={{flexDirection: 'row'}}>
-            <Text style={styles.title}>MONTH</Text>
-            <GoToWeek text="Week" onPress={() => navigation.navigate("weeklyCalendarScreen")}/>
+            {/* <GoToWeek text="Week" onPress={() => navigation.navigate("weeklyCalendarScreen")}/> */}
           </View>
-          <View style={{ flexDirection: 'row', justifyContent: 'center', width: 375}}>
+          {/* <View style={{ flexDirection: 'row', justifyContent: 'center', width: 375}}>
             <Text style={styles.subTitle}>SU</Text>
             <Text style={styles.subTitle}>MO</Text>
             <Text style={styles.subTitle}>TU</Text>
@@ -33,14 +34,11 @@ export default function App({navigation}) {
           </View>
           <View style={styles.box}>
           </View>
-          <RNCalendar/>
-          <MonthEventsCarousel list={MonthlyEvents}/>
+          <RNCalendar/> */}
         </View>
-        <EventButton text="Don't have an account? Sign Up" onPress={() => navigation.navigate("signUp")}/>
 
-        </ScrollView>
-        <BottomNavBar/>
       </SafeAreaView>
+      </ScrollView>
     </ImageBackground>
   );
 }
@@ -50,27 +48,18 @@ const styles = StyleSheet.create({
     paddingVertical: 24,
     paddingHorizontal: 0,
     flex: 1,
-    flexGrow: 1,
     flexShrink: 1,
     flexBasis:0,
-  },
-  header: {
-    marginVertical: 36,
-  },
-  headerImg: {
-    width: 80,
-    height: 80,
-    alignSelf: 'left',
-    marginBottom: 36,
+    height: 852,
+    width: 393,
   },
   title: {
-    fontSize: 20,
-    fontWeight: '700',
+    fontSize: 25,
+    fontWeight: '500',
     color: 'white',
-    marginTop: 10,
     textAlign: 'left',
-    marginLeft: 20,
-    letterSpacing: 5,
+    marginLeft: 30,
+    marginTop: 20,
   },
   subTitle: {
     fontSize: 20,
