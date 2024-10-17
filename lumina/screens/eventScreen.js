@@ -57,8 +57,6 @@ export default function App({navigation}) {
 
           <LunarSolarCarousel list={lunarAndSolarEvents}/>
         </View>
-
-        <EventButton text="Return to sign up" onPress={() => navigation.navigate("signUp")}/>
         </ScrollView>
       </SafeAreaView>
     </ImageBackground>

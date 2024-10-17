@@ -12,11 +12,11 @@ import GoToWeek from '/Users/thebenzsecrets/Desktop/Lumina/lumina/buttons/calend
 import getDaysInMonth from 'react-native-calendars/src/calendar/day';
 
 export default function App({navigation}) {
-  const daysInMonth = getDaysInMonth.getDaysInMonth();
+  //const daysInMonth = getDaysInMonth.getDaysInMonth();
   
   return (
       <ImageBackground source={require("/Users/thebenzsecrets/Desktop/Lumina/lumina/assets/calendarPhotos/31AD543C-39F9-4AB5-AF7C-902A3B99310D.jpeg")} style={styles.container}>
-      <Text style={styles.title}>{daysInMonthß}</Text>
+      <Text style={styles.title}>October</Text>
       <ScrollView>
       <SafeAreaView>
         <View>
