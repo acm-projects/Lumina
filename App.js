@@ -2,18 +2,18 @@ import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import Onboarding from './components/screens/Onboarding';
+import { StyleSheet, Text, SafeAreaView, TouchableOpacity } from 'react-native';
+import IndexScreen from './index'; 
 import { useNavigation } from '@react-navigation/native';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Splash" component={SplashScreen} />
-        <Stack.Screen name="Onboarding" component={Onboarding} />
+        <Stack.Screen name="Index" component={IndexScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -22,17 +22,15 @@ export default function App() {
 function SplashScreen() {
   const navigation = useNavigation();
 
-  React.useEffect(() => {
-    const navigateToOnboarding = async () => {
-      await new Promise(resolve => setTimeout(resolve, 2000)); // wait for 2 seconds
-      navigation.navigate('Onboarding');
-    };
-    navigateToOnboarding();
-  }, [navigation]);
+  const handlePress = () => {
+    navigation.navigate('Index');
+  };
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Welcome to Lumina</Text>
+      <TouchableOpacity onPress={handlePress} style={styles.touchable}>
+        <Text style={styles.text}>Welcome to Lumina</Text>
+      </TouchableOpacity>
       <StatusBar hidden={true} />
     </SafeAreaView>
   );
@@ -44,5 +42,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  touchable: {
+    padding: 20,
+  },
+  text: {
+    color: '#fff', 
+    fontSize: 24,  
   },
 });
