@@ -1,0 +1,18 @@
+{
+  "whyContinueWithGen1": "Prefer not to answer",
+  "projectName": "lumina40",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react-native",
+    "config": {
+      "SourceDir": "src",
+      "DistributionDir": "/",
+      "BuildCommand": "npm run-script build",
+      "StartCommand": "npm run-script start"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

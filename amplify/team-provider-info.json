@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lumina40-dev-6bacc-authRole",
+      "UnauthRoleArn": "arn:aws:iam::761018869308:role/amplify-lumina40-dev-6bacc-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::761018869308:role/amplify-lumina40-dev-6bacc-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lumina40-dev-6bacc-deployment",
+      "UnauthRoleName": "amplify-lumina40-dev-6bacc-unauthRole",
+      "StackName": "amplify-lumina40-dev-6bacc",
+      "StackId": "arn:aws:cloudformation:us-east-1:761018869308:stack/amplify-lumina40-dev-6bacc/adfe8930-8cdf-11ef-b02d-12945c58acdd",
+      "AmplifyAppId": "d2dk7dzjytlz9r"
+    },
+    "categories": {
+      "api": {
+        "lumina40": {}
+      },
+      "auth": {
+        "lumina403da8c2cc": {}
+      }
+    }
+  }
+}
