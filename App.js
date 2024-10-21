@@ -132,6 +132,9 @@ function MyTabs() {
         <Tab.Screen name="profileScreen" component={ProfileScreen}/>
         
         {/* NOT ON TAB BAR */}
+        <Tab.Screen name="eventDetailsScreen" component={EventDetailsScreen} options={{
+          tabBarButton: () => null, // Hides the tab from the tab bar
+        }}/>
       </Tab.Navigator>
   );
 }

@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   calendarContainer: {
-    top: 100,
+    top: 90,
     flex: 1,
   },
   header: {

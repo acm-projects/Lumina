@@ -30,7 +30,7 @@ const PlanetCarousel = ({list}) => {
                       }}
 
                       onPress={() => 
-                        navigation.navigate('EventDetailsScreen', {trip: item})
+                        navigation.navigate('eventDetailsScreen', {trip: item})
                       }
                     >
                       <View style={styles.card}>
