@@ -109,8 +109,9 @@ const styles = StyleSheet.create({
     top: 5,
     textAlign: 'center',
     fontWeight:'700',
-    fontSize: '30',
-    color: '#8C70B6', 
+    fontSize: 30,
+    color: '#8C70B6',
+    position: 'relative',
 
   },
   monthText: {

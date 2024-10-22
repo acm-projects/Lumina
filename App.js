@@ -63,11 +63,12 @@ import { createTodo } from './src/graphql/mutations';
 import { listTodos } from './src/graphql/queries';
 
 //event screen imports
-import StarGazingCarousel from './features/eventScreenFeatures/carousels/stargazingCarousel';
-import PlanetCarousel from './features/eventScreenFeatures/carousels/planetCarousel';
-import LunarSolarCarousel from './features/eventScreenFeatures/carousels/lunar_solarCarousel';
 import EventDetailsScreen from './features/eventScreenFeatures/extraScreens/EventDetailsScreen';
-import EventDetailButton from './features/eventScreenFeatures/buttons/EventDetailButtons';
+
+//calendarScreenImports
+import WeeklyCalendarScreen from './features/calendarScreenFeatures/extraScreens/weeklyCalendarScreen.js';
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -134,6 +135,9 @@ function MyTabs() {
         {/* NOT ON TAB BAR */}
         <Tab.Screen name="eventDetailsScreen" component={EventDetailsScreen} options={{
           tabBarButton: () => null, // Hides the tab from the tab bar
+        }}/>
+        <Tab.Screen name="weeklyCalendarScreen" component={WeeklyCalendarScreen} options={{
+          tabBarButton: () => null,
         }}/>
       </Tab.Navigator>
   );

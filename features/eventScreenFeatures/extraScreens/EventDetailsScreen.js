@@ -8,12 +8,12 @@ const EventDetailsScreen = ({navigation, route}) => {
     return (
         <ImageBackground source={require("/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/EventBackground.jpeg")} style={styles.container}>
             <SafeAreaView>
-                <View>
+                {/* <View>
                     <View style={styles.searchContainer}>
                         <Image style={styles.usernameIcon} source={require('/Users/thebenzsecrets/lumina4.0/assets/icons8-search-30.png')}/>
                         <TextInput style={styles.textInput} placeholderTextColor="#0F1630"/>
                     </View>
-                </View>
+                </View> */}
                 <ScrollView>
                     <View style={styles.imageBox}>
                         <Image source={trip.image} style={[StyleSheet.absoluteFillObject, styles.image]}/>
@@ -109,8 +109,8 @@ const styles = StyleSheet.create({
         height: 400,
     },
     image: {
-        borderTopLeftRadius: '20',
-        borderTopRightRadius: '20',
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
         width: 395,
         height: 400,
     },

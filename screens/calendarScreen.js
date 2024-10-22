@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Dimensions} from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Dimensions, TouchableWithoutFeedback} from 'react-native';
 import MonthlyData from "/Users/thebenzsecrets/lumina4.0/features/calendarScreenFeatures/month1/monthlyData.json";
+import { useNavigation } from '@react-navigation/native';
 
 const screenWidth = Dimensions.get('window').width;
 const dayWidth = screenWidth / 7;
 
 const CustomCalendar = () => {
+  const navigation = useNavigation();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [daysInMonth, setDaysInMonth] = useState([]);
   
@@ -107,11 +109,13 @@ const CustomCalendar = () => {
       <View style={styles.daysGrid}>
         {daysInMonth.map((day, index) => (
           <View key={index} style={index % 7 === 6 ? styles.endBox : styles.dayBox}>
-            <View style={day === new Date().getDate() && currentDate.getMonth() === new Date().getMonth() ? styles.todayBox: styles.noBox}>
-            <Text style={day === new Date().getDate() && currentDate.getMonth() === new Date().getMonth() ? styles.today : styles.dayText}>
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('weeklyCalendarScreen', {day})}>
+              <View style={day === new Date().getDate() && currentDate.getMonth() === new Date().getMonth() ? styles.todayBox: styles.noBox}>
+              <Text style={day === new Date().getDate() && currentDate.getMonth() === new Date().getMonth() ? styles.today : styles.dayText}>
               {day}
-            </Text>
-            </View>
+              </Text>
+              </View>
+            </TouchableWithoutFeedback>
             {/* Render events under each day */}
             {getEventsForDay(day).map((event) => (
               <View style={getEventColor(event)}>
