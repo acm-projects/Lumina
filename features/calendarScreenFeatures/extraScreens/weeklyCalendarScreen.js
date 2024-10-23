@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Dimensions, ScrollView} from 'react-native';
 import MonthlyData from "/Users/thebenzsecrets/lumina4.0/features/calendarScreenFeatures/month1/monthlyData.json";
+import { FlatList } from 'react-native-gesture-handler';
+import CalendarEventCarousel from '../carousels/calendarEventCarousel';
 
 const screenHeight = Dimensions.get('window').height; //852
 const screenWidth = Dimensions.get('window').width; //393
@@ -15,6 +17,14 @@ const WeeklyCalendarScreen = ({route}) => {
         console.log("Fetching events for date:", dateKey);
         return MonthlyData.events[dateKey] || [];
     };
+
+    const lists = [
+        { id: 1, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo1.jpeg')},
+        { id: 2, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo2.jpeg')},
+        { id: 3, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo3.jpg')},
+        { id: 4, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo4.jpg')},
+        { id: 5, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo5.jpg')},
+    ];
 
     //function to get color for type of event
     const getEventColor = (event) => {
@@ -46,7 +56,7 @@ const WeeklyCalendarScreen = ({route}) => {
                 <Text style={header.headerText}>{dayString}</Text>
                 <Text style={header.subHeader}>{monthNames[month-1].substring(0, 3)} {dog}, {year}</Text>
             </View>
-            <ScrollView style={weekdayWidget.container} horizontal={true} contentContainerStyle={{justifyContent: 'space-evenly'}}>
+            <ScrollView style={weekdayWidget.container} horizontal={true} contentContainerStyle={{justifyContent: 'space-evenly', gap: 10, paddingHorizontal: 30}} showsHorizontalScrollIndicator='false'>
                 <View style={weekdayWidget.dayBox}>
                     <Text style={weekdayWidget.dayText}>{shortDaysOfTheWeek[getDate().getDay()]}</Text>
                     <Text style={[weekdayWidget.subtitleNumberDay, {color: 'white'}]}>{dog-3}</Text>
@@ -79,9 +89,18 @@ const WeeklyCalendarScreen = ({route}) => {
 
             <View style={widgets.widgetContainer}>
                 <View style={widgets.cloudContainer}>
-
+                    <Text style={widgets.cloudText}>Clouds</Text>
                 </View>
+                <View style={widgets.moonContainer}>
+                    <Text style={widgets.moonText}>Full Moon</Text>
+                </View>
+                <View style={widgets.weatherContainer}>
+                    <Text style={widgets.weatherText}>98</Text>
+                </View>
+            </View>
 
+            <View style={{top: 30}}>
+                <CalendarEventCarousel items={lists}/>
             </View>
 
             </ScrollView>
@@ -99,7 +118,7 @@ const header = StyleSheet.create({
     },
     headerText: {
         fontWeight: '700',
-        fontSize: 27,
+        fontSize: 40,
         color: '#fff',
         textTransform: 'capitalize',
     },
@@ -110,48 +129,49 @@ const header = StyleSheet.create({
     }
 });
 
-const boxWidth = 85;
+const boxWidth = 60;
 
 const weekdayWidget = StyleSheet.create({
     container: {
         alignSelf: 'center',
         marginTop: 110,
-        height: 125,
+        height: 100,
         width: boxWidth * 7,
         backgroundColor: 'transparent',
         flexDirection: 'row',
+        alignContent: 'center',
     },
     dayBox: {
         borderRadius: 10,
         alignItems: 'center',
         width: boxWidth,
-        height: 125,
+        height: 90,
         backgroundColor: 'transparent',
     },
     chosenDayBox: {
-        borderRadius: 10,
+        borderRadius: 5,
         alignItems: 'center',
         width: boxWidth,
-        height: 125,
+        height: 90,
         backgroundColor: '#7B62A9',
     },
     dayText: {
-        top: 20,
-        fontSize: 35,
+        top: 15,
+        fontSize: 30,
         color: 'white',
         textTransform: 'capitalize',
         fontWeight: '400',
     },
     chosenDayText: {
-        top: 20,
-        fontSize: 35,
+        top: 15,
+        fontSize: 30,
         color: '#000D30',
         textTransform: 'capitalize',
         fontWeight: '400',
     },
     subtitleNumberDay: {
-        top: 25,
-        fontSize: 30,
+        top: 15,
+        fontSize: 20,
         fontWeight: 'ultralight',
     }
 });
@@ -161,7 +181,6 @@ const widgets = StyleSheet.create({
         flexDirection: 'row',
         height: 90,
         width: screenWidth,
-        backgroundColor: 'white',
         marginTop: 30,
         paddingHorizontal: 20,
     },
@@ -170,7 +189,31 @@ const widgets = StyleSheet.create({
         width: 80,
         backgroundColor: '#474747',
         borderRadius: 10,
+    },
+    cloudText: {
+        color: 'white',
+    },
+    moonContainer: {
+        marginLeft: 20,
+        height: 90,
+        width: 150,
+        backgroundColor: '#474747',
+        borderRadius: 10,
+    },
+    moonText: {
+        color: 'white',
+    },
+    weatherContainer: {
+        marginLeft: 20,
+        height: 90,
+        width: 80,
+        backgroundColor: '#474747',
+        borderRadius: 10,
+    },
+    weatherText: {
+        color: 'white',
     }
+
 });
 
 const styles = StyleSheet.create({
