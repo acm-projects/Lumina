@@ -78,9 +78,8 @@ const CustomCalendar = () => {
           return styles.stargazingBox;
         default:
           return styles.socialBox;
-    }
-      
-  }
+    };    
+  };
 
   return (
     <ImageBackground source={require('/Users/thebenzsecrets/lumina4.0/assets/calendarScreenImages/calendarScreenBackground3.jpg')} style={styles.container}>
@@ -109,7 +108,7 @@ const CustomCalendar = () => {
       <View style={styles.daysGrid}>
         {daysInMonth.map((day, index) => (
           <View key={index} style={index % 7 === 6 ? styles.endBox : styles.dayBox}>
-            <TouchableWithoutFeedback onPress={() => navigation.navigate('weeklyCalendarScreen', {day})}>
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('weeklyCalendarScreen',{year: currentYear, month: currentDate.getMonth(), dog: index-1})}>
               <View style={day === new Date().getDate() && currentDate.getMonth() === new Date().getMonth() ? styles.todayBox: styles.noBox}>
               <Text style={day === new Date().getDate() && currentDate.getMonth() === new Date().getMonth() ? styles.today : styles.dayText}>
               {day}
@@ -138,7 +137,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   calendarContainer: {
-    top: 90,
+    top: 80,
     flex: 1,
   },
   header: {
@@ -177,7 +176,7 @@ const styles = StyleSheet.create({
   },
   dayBox: {
     width:dayWidth,
-    height: 125,
+    height: 130,
     borderColor: '#7379AE',
     borderWidth: 1,
     alignItems: 'center',
@@ -186,7 +185,7 @@ const styles = StyleSheet.create({
   },
   endBox: {
     width:dayWidth,
-    height: 125,
+    height: 130,
     borderColor: '#7379AE',
     borderWidth: 1,
     alignItems: 'center',
@@ -198,9 +197,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
     color: 'white',
-  },
-  noBox: {
-
   },
   today: {
     fontSize: 16,
