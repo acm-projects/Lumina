@@ -5,7 +5,7 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground
-        source={{ uri: '/Users/apple/pleasework/luminaapp_new/assets/images/homescreen.png' }}
+        source={'/Users/apple/pleasework/luminaapp_new/assets/images/homescreenfinal.png'}
         style={styles.background}
       >
         <View style={styles.moonAndWeatherContainer}>
@@ -30,7 +30,7 @@ export default function HomeScreen() {
             <View style={styles.buttonContent}>
               <Text style={styles.buttonText}>Start planning</Text>
               <Image
-                source={{ uri: 'https://icons.veryicon.com/png/o/miscellaneous/8atour/circle-right-arrow.png' }} 
+                source={{ uri: 'https://static-00.iconduck.com/assets.00/arrow-right-circle-icon-512x512-2p1e2aaw.png' }} 
                 style={styles.icon} 
               />
             </View>
@@ -124,8 +124,8 @@ const styles = StyleSheet.create({
   },
   planningButton: {
     backgroundColor: '#7C63AB',
-    paddingVertical: 20,
-    paddingHorizontal: 45,
+    paddingVertical: 30,
+    paddingHorizontal: 32,
     borderRadius: 20,
     alignItems: 'center',
   },
@@ -134,8 +134,8 @@ const styles = StyleSheet.create({
     alignItems: 'left', 
   },
   buttonText: {
-    fontSize: 20,
-    color: '#fff',
+    fontSize: 25,
+    color: '#000',
     fontWeight: 'bold',
     fontFamily: 'Nunito-sans',
     marginTop: 5,
@@ -143,14 +143,14 @@ const styles = StyleSheet.create({
   icon: {
     width: 40, 
     height: 40,
-    marginLeft: 45,
-    marginTop: 5,
+    marginLeft: 25,
+    marginTop: 20,
   },
   buttonSubText: {
-    fontSize: 11,
-    color: '#fff',
+    fontSize: 10,
+    color: '#000',
     fontFamily: 'Nunito-sans',
-    marginRight: 50,
+    marginRight: 70,
     marginTop: -5,
   },
   newsContainer: {
