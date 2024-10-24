@@ -19,5 +19,26 @@
         "lumina403da8c2cc": {}
       }
     }
+  },
+  "luminatwo": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lumina40-luminatwo-b9b13-authRole",
+      "UnauthRoleArn": "arn:aws:iam::761018869308:role/amplify-lumina40-luminatwo-b9b13-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::761018869308:role/amplify-lumina40-luminatwo-b9b13-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-lumina40-luminatwo-b9b13-deployment",
+      "UnauthRoleName": "amplify-lumina40-luminatwo-b9b13-unauthRole",
+      "StackName": "amplify-lumina40-luminatwo-b9b13",
+      "StackId": "arn:aws:cloudformation:us-east-2:761018869308:stack/amplify-lumina40-luminatwo-b9b13/f0dc7280-91b2-11ef-9592-0adbae59ecaf",
+      "AmplifyAppId": "d47zkvr7rk3xa"
+    },
+    "categories": {
+      "auth": {
+        "lumina403da8c2cc": {}
+      },
+      "api": {
+        "lumina40": {}
+      }
+    }
   }
 }
