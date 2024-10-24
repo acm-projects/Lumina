@@ -1,12 +1,16 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, onPress} from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, Pressable} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const CalendarEventCarousel = ({ items }) => {
     const navigation = useNavigation();
     return (
         <ScrollView vertical={true} contentContainerStyle={{justifyContent: 'space-evenly', gap: 30, paddingHorizontal: 20}}>
             {items.map((item, index) => (
+                <Pressable onPress={() => 
+                    navigation.navigate('eventDetailsScreen', {trip: item})
+                  }>
                 <View key={index} style={styles.itemContainer}>
                     <View style={styles.textContainer}>
                         <View>
@@ -26,6 +30,7 @@ const CalendarEventCarousel = ({ items }) => {
                         <Image style={styles.imageContainer} source={item.photo}/>
                     </View>
                 </View>
+                </Pressable>
             ))}
         </ScrollView>
     );
