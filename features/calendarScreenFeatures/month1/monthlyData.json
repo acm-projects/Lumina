@@ -1,0 +1,18 @@
+{
+    "events": {
+      "2024-11-01": [
+        { "id": 1, "name": "Solar Eclipse", "type": 1},
+        { "id": 2, "name": "Lunar Eclipse", "type": 2},
+        { "id": 3, "name": "Stargazing", "type": 3},
+        { "id": 4, "name": "Social", "type": 4}
+      ],
+      "2024-11-05": [
+        { "id": 5, "name": "Full Moon", "type": 2}
+      ],
+      "2024-11-20": [
+        { "id": 6, "name": "Social", "type": 4},
+        { "id": 7, "name": "Solar Eclipse", "type": 1}
+      ]
+    }
+  }
+  
