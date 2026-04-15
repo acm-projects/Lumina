@@ -22,7 +22,7 @@ function NoAccountButton({text, onPress}) {
 export default function SignInScreen({navigation}) {
 
   return (
-    <ImageBackground source={require("/Users/thebenzsecrets/lumina4.0/assets/signInScreenImages/signUpBackground.png")}
+    <ImageBackground source={require("../assets/signInScreenImages/signUpBackground.png")}
     style={styles.container}>
       <SafeAreaView>
        <View>
@@ -33,7 +33,7 @@ export default function SignInScreen({navigation}) {
        <View>
          <Text style={styles.emailTitle}>Email</Text>
          <View style={styles.inputContainer}>
-           <Image style={styles.usernameIcon} source={require('/Users/thebenzsecrets/lumina4.0/assets/signInScreenImages/icons8-person-24.png')}/>
+           <Image style={styles.usernameIcon} source={require('../assets/signInScreenImages/icons8-person-24.png')}/>
            <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="Username"/>
          </View>
        </View>
@@ -41,7 +41,7 @@ export default function SignInScreen({navigation}) {
        <View>
          <Text style={styles.passwordTitle}>Password</Text>
          <View style={styles.inputContainer}>
-           <Image style={styles.usernameIcon} source={require('/Users/thebenzsecrets/lumina4.0/assets/signInScreenImages/icons8-person-24.png')}/>
+           <Image style={styles.usernameIcon} source={require('../assets/signInScreenImages/icons8-person-24.png')}/>
            <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="Username"/>
          </View>
         </View>

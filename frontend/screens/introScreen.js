@@ -7,9 +7,9 @@ import * as Font from 'expo-font';
 const { width } = Dimensions.get('window');
 
 const slides = [
-  { key: '1', video: require('/Users/thebenzsecrets/lumina4.0/assets/introScreenVideos/page1.mp4'), title: 'Explore celestial events', description: 'Stay updated on upcoming meteor showers, eclipses, and more with our easy-to-use celestial calendar.'},
-  { key: '2', video: require('/Users/thebenzsecrets/lumina4.0/assets/introScreenVideos/page2.mp4'), title: 'Discover nearby stargazing sites', description: 'Find hidden gems with our location finder, showing you the best dark sky locations.' },
-  { key: '3', video: require('/Users/thebenzsecrets/lumina4.0/assets/introScreenVideos/page3final.mp4'), title: 'Connect with your community', description: 'Join fellow astronomy enthusiasts on your journey through the stars!' },
+  { key: '1', video: require('../assets/introScreenVideos/page1.mp4'), title: 'Explore celestial events', description: 'Stay updated on upcoming meteor showers, eclipses, and more with our easy-to-use celestial calendar.'},
+  { key: '2', video: require('../assets/introScreenVideos/page2.mp4'), title: 'Discover nearby stargazing sites', description: 'Find hidden gems with our location finder, showing you the best dark sky locations.' },
+  { key: '3', video: require('../assets/introScreenVideos/page3final.mp4'), title: 'Connect with your community', description: 'Join fellow astronomy enthusiasts on your journey through the stars!' },
 ];
 
 const IntroScreen = () => {
@@ -34,7 +34,7 @@ const IntroScreen = () => {
     <View style={styles.container}>
       {showSplash ? (
         <TouchableOpacity onPress={handleSplashPress} style={styles.splashContainer}>
-          <Image source={require('/Users/thebenzsecrets/lumina4.0/assets/introScreenImages/splash.png')} style={styles.splashImage} />
+          <Image source={require('../assets/introScreenImages/splash.png')} style={styles.splashImage} />
         </TouchableOpacity>
       ) : (
         <>

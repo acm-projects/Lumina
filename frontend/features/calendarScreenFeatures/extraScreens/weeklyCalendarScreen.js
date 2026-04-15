@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Button,StyleSheet, TouchableOpacity, ImageBackground, Dimensions, ScrollView, Image} from 'react-native';
-import MonthlyData from "/Users/thebenzsecrets/lumina4.0/features/calendarScreenFeatures/month1/monthlyData.json";
+import MonthlyData from "../month1/monthlyData.json";
 import { FlatList } from 'react-native-gesture-handler';
 import CalendarEventCarousel from '../carousels/calendarEventCarousel';
 
@@ -38,11 +38,11 @@ const WeeklyCalendarScreen = ({route}) => {
     };
 
     const lists = [
-        { id: 1, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo1.jpeg')},
-        { id: 2, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo2.jpeg')},
-        { id: 3, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo3.jpg')},
-        { id: 4, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo4.jpg')},
-        { id: 5, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo5.jpg')},
+        { id: 1, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('../../../assets/eventScreenImages/events_stargazing_photos/photo1.jpeg')},
+        { id: 2, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('../../../assets/eventScreenImages/events_stargazing_photos/photo2.jpeg')},
+        { id: 3, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('../../../assets/eventScreenImages/events_stargazing_photos/photo3.jpg')},
+        { id: 4, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('../../../assets/eventScreenImages/events_stargazing_photos/photo4.jpg')},
+        { id: 5, title: 'International Observe the Moon Night', date: 'September 18th', time: '8:00AM to 10:00AM', location: '700 Planetarium Place, Arlington TX', photo: require('../../../assets/eventScreenImages/events_stargazing_photos/photo5.jpg')},
     ];
 
     //function to get color for type of event
@@ -73,7 +73,7 @@ const WeeklyCalendarScreen = ({route}) => {
     const dayString = daysOfTheWeek[getDate().getDay()];
     
     return (
-        <ImageBackground source={require('/Users/thebenzsecrets/lumina4.0/assets/calendarScreenImages/calendarScreenBackground3.jpg')} style={styles.container}>
+        <ImageBackground source={require('../../../assets/calendarScreenImages/calendarScreenBackground3.jpg')} style={styles.container}>
             <ScrollView >
             <View style={header.headerBox}>
                 <Text style={header.headerText}>{dayString}</Text>
@@ -112,7 +112,7 @@ const WeeklyCalendarScreen = ({route}) => {
 
             <View style={widgets.widgetContainer}>
                 <View style={widgets.cloudContainer}>
-                    <Image style={{height: 30, width: 30, resizeMode: 'contain', marginLeft: 10, marginTop: 10}} source={require('/Users/thebenzsecrets/lumina4.0/assets/calendarScreenImages/icons8-cloud-96.png')}/>
+                    <Image style={{height: 30, width: 30, resizeMode: 'contain', marginLeft: 10, marginTop: 10}} source={require('../../../assets/calendarScreenImages/icons8-cloud-96.png')}/>
                     <Text style={widgets.cloudText}>Clouds</Text>
                     <Text style={widgets.cloudNumberText}>{currentCloudPrec}%</Text>
                 </View>

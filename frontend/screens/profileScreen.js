@@ -37,7 +37,7 @@ const ProfileScreen = () => {
 
   return (
       <ImageBackground
-        source={require('/Users/thebenzsecrets/lumina4.0/assets/profileScreenImages/Untitled design (6).png')}
+        source={require('../assets/profileScreenImages/Untitled design (6).png')}
         style={styles.container}
       >
         <View style={styles.profile}>

@@ -26,32 +26,32 @@ export default function SignUpScren({navigation}) {
 
   return (
 
-    <ImageBackground source={require("/Users/thebenzsecrets/lumina4.0/assets/signInScreenImages/signUpBackground.png")}
+    <ImageBackground source={require("../assets/signInScreenImages/signUpBackground.png")}
     style={styles.container}>
       <SafeAreaView>
         <View>
-          <Image source={require("/Users/thebenzsecrets/lumina4.0/assets/signUpImages/Lumina_Logo.jpeg")} style={styles.logo}/>
+          <Image source={require("../assets/signUpImages/Lumina_Logo.jpeg")} style={styles.logo}/>
           <Text style={styles.title}>Sign Up</Text>
           <Text style={styles.subtitle}>Create your Account</Text>
         </View>
 
         <View style={styles.inputContainer}>
-          <Image style={styles.emailIcon} source={require('/Users/thebenzsecrets/lumina4.0/assets/signUpImages/icons8-email-24.png')}/>
+          <Image style={styles.emailIcon} source={require('../assets/signUpImages/icons8-email-24.png')}/>
           <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="Email"/>
         </View>
 
          <View style={styles.inputContainer}>
-          <Image style={styles.usernameIcon} source={require('/Users/thebenzsecrets/lumina4.0/assets/signUpImages/icons8-person-24.png')}/>
+          <Image style={styles.usernameIcon} source={require('../assets/signUpImages/icons8-person-24.png')}/>
           <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="Username"/>
          </View>
 
          <View style={styles.inputContainer}>
-          <Image style={styles.passwordIcon} source={require('/Users/thebenzsecrets/lumina4.0/assets/signUpImages/icons8-password-24.png')}/>
+          <Image style={styles.passwordIcon} source={require('../assets/signUpImages/icons8-password-24.png')}/>
           <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="Password"/>
          </View>
 
          <View style={styles.inputContainer}>
-          <Image style={styles.locationIcon} source={require('/Users/thebenzsecrets/lumina4.0/assets/signUpImages/icons8-location-24.png')}/>
+          <Image style={styles.locationIcon} source={require('../assets/signUpImages/icons8-location-24.png')}/>
           <TextInput style={styles.textInput} placeholderTextColor="#0F1630" placeholder="City, State"/>
          </View>
 

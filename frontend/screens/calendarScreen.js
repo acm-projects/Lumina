@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Dimensions, TouchableWithoutFeedback} from 'react-native';
-import MonthlyData from "/Users/thebenzsecrets/lumina4.0/features/calendarScreenFeatures/month1/monthlyData.json";
+import MonthlyData from "../features/calendarScreenFeatures/month1/monthlyData.json";
 import { useNavigation } from '@react-navigation/native';
 
 const screenWidth = Dimensions.get('window').width;
@@ -82,7 +82,7 @@ const CustomCalendar = () => {
   };
 
   return (
-    <ImageBackground source={require('/Users/thebenzsecrets/lumina4.0/assets/calendarScreenImages/calendarScreenBackground3.jpg')} style={styles.container}>
+    <ImageBackground source={require('../assets/calendarScreenImages/calendarScreenBackground3.jpg')} style={styles.container}>
     <View style={styles.calendarContainer}>
       {/* Header for the current month and navigation */}
       <View style={styles.header}>
@@ -245,7 +245,7 @@ export default CustomCalendar;
 //     render() {
 //         console.log(currentDate.getDaysInMonth);
 //         return (
-//           <ImageBackground source={require('/Users/thebenzsecrets/lumina4.0/assets/calendarScreenImages/calendarScreenBackground3.jpg')} style={styles.container}>
+//           <ImageBackground source={require('../assets/calendarScreenImages/calendarScreenBackground3.jpg')} style={styles.container}>
 //             <Text style={{color: 'white', left: 20, top: 70, fontSize: 27, fontWeight: '700',}}>{monthName}</Text>
 //             <View style={{position: 'absolute', height: phoneHeight, width: phoneWidth}}>
 //               <View style={{top: 160, flexDirection: 'column', gap: 102.5, position: 'absolute'}}>

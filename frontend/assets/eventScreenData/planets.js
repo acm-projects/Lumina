@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { FlatList, StyleSheet, Text, View, Button, SafeAreaView, TouchableOpacity, TextInput, ImageBackground, ScrollView} from 'react-native';
 
-export const starEvents = [
+export const planetEvents = [
         {host: "University of Texas at Arlington", 
             name: "Texas Stargazing",
             location: "UTA Planetarium",
@@ -11,7 +11,7 @@ export const starEvents = [
             day: 9,
             address: "700 Planetarium Place, Arlington TX",
             description: "Join us at the UTA Observatory to celebrate International Observe the Moon Night! Unite with fellow Moon enthusiasts and curious people to look up and learn about Earth's only natural satellite. The Moon will be at a first quarter ― a great phase for evening observing. A first-quarter Moon offers excellent viewing opportunities along the terminator (the line between night and day), where shadows enhance the Moon’s cratered landscape. We will have our 16 inch observatory telescope available to look through as well as a few other smaller telescopes. However, feel free to bring your own, telescopes, binoculars, or camera to observe. This event is free and open to the public, no need to register.",
-            image: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo1.jpeg')},
+            image: require('../eventScreenImages/events_planets_photos/photo1.png')},
         {host: "University of Texas at Arlington", 
             name: "Texas Stargazing",
             location: "UTA Planetarium",
@@ -21,7 +21,7 @@ export const starEvents = [
             day: 9,
             address: "700 Planetarium Place, Arlington TX",
             description: "Join us at the UTA Observatory to celebrate International Observe the Moon Night! Unite with fellow Moon enthusiasts and curious people to look up and learn about Earth's only natural satellite. The Moon will be at a first quarter ― a great phase for evening observing. A first-quarter Moon offers excellent viewing opportunities along the terminator (the line between night and day), where shadows enhance the Moon’s cratered landscape. We will have our 16 inch observatory telescope available to look through as well as a few other smaller telescopes. However, feel free to bring your own, telescopes, binoculars, or camera to observe. This event is free and open to the public, no need to register.",
-            image: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo2.jpeg')},
+            image: require('../eventScreenImages/events_planets_photos/photo2.jpeg')},
         {host: "University of Texas at Arlington", 
             name: "Texas Stargazing",
             location: "UTA Planetarium",
@@ -31,7 +31,7 @@ export const starEvents = [
             day: 9,
             address: "700 Planetarium Place, Arlington TX",
             description: "Join us at the UTA Observatory to celebrate International Observe the Moon Night! Unite with fellow Moon enthusiasts and curious people to look up and learn about Earth's only natural satellite. The Moon will be at a first quarter ― a great phase for evening observing. A first-quarter Moon offers excellent viewing opportunities along the terminator (the line between night and day), where shadows enhance the Moon’s cratered landscape. We will have our 16 inch observatory telescope available to look through as well as a few other smaller telescopes. However, feel free to bring your own, telescopes, binoculars, or camera to observe. This event is free and open to the public, no need to register.",
-            image: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo3.jpg')},
+            image: require('../eventScreenImages/events_planets_photos/photo3.jpg')},
         {host: "University of Texas at Arlington", 
             name: "Texas Stargazing",
             location: "UTA Planetarium",
@@ -41,7 +41,7 @@ export const starEvents = [
             day: 9,
             address: "700 Planetarium Place, Arlington TX",
             description: "Join us at the UTA Observatory to celebrate International Observe the Moon Night! Unite with fellow Moon enthusiasts and curious people to look up and learn about Earth's only natural satellite. The Moon will be at a first quarter ― a great phase for evening observing. A first-quarter Moon offers excellent viewing opportunities along the terminator (the line between night and day), where shadows enhance the Moon’s cratered landscape. We will have our 16 inch observatory telescope available to look through as well as a few other smaller telescopes. However, feel free to bring your own, telescopes, binoculars, or camera to observe. This event is free and open to the public, no need to register.",
-            image: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo4.jpg')},
+            image: require('../eventScreenImages/events_planets_photos/photo4.jpg')},
         {host: "University of Texas at Arlington", 
             name: "Texas Stargazing",
             location: "UTA Planetarium",
@@ -51,7 +51,7 @@ export const starEvents = [
             day: 9,
             address: "700 Planetarium Place, Arlington TX",
             description: "Join us at the UTA Observatory to celebrate International Observe the Moon Night! Unite with fellow Moon enthusiasts and curious people to look up and learn about Earth's only natural satellite. The Moon will be at a first quarter ― a great phase for evening observing. A first-quarter Moon offers excellent viewing opportunities along the terminator (the line between night and day), where shadows enhance the Moon’s cratered landscape. We will have our 16 inch observatory telescope available to look through as well as a few other smaller telescopes. However, feel free to bring your own, telescopes, binoculars, or camera to observe. This event is free and open to the public, no need to register.",
-            image: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo5.jpg')},
+            image: require('../eventScreenImages/events_planets_photos/photo5.jpg')},
         {host: "University of Texas at Arlington", 
             name: "Texas Stargazing",
             location: "UTA Planetarium",
@@ -61,6 +61,6 @@ export const starEvents = [
             day: 9,
             address: "700 Planetarium Place, Arlington TX",
             description: "Join us at the UTA Observatory to celebrate International Observe the Moon Night! Unite with fellow Moon enthusiasts and curious people to look up and learn about Earth's only natural satellite. The Moon will be at a first quarter ― a great phase for evening observing. A first-quarter Moon offers excellent viewing opportunities along the terminator (the line between night and day), where shadows enhance the Moon’s cratered landscape. We will have our 16 inch observatory telescope available to look through as well as a few other smaller telescopes. However, feel free to bring your own, telescopes, binoculars, or camera to observe. This event is free and open to the public, no need to register.",
-            image: require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/events_stargazing_photos/photo6.jpg')},
+            image: require('../eventScreenImages/events_planets_photos/photo6.jpeg')},
          
     ];
