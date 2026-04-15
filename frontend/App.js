@@ -17,30 +17,28 @@ import { Authenticator, useAuthenticator, useTheme} from '@aws-amplify/ui-react-
 //import {SignIn, SignUp, ConfirmSignUp, ConfirmSignIn} from 'aws-amplify-react-native';
 
 // Screen Imports
-import IntroScreen from '../lumina4.0/screens/introScreen.js';
-import HomeScreen from '../lumina4.0/screens/homeScreen';
-import CalendarScreen from '../lumina4.0/screens/calendarScreen';
-import TrackerScreen from '../lumina4.0/screens/trackerScreen';
-import EventScreen from '../lumina4.0/screens/eventScreen';
-import ProfileScreen from '../lumina4.0/screens/profileScreen';
-import EventDetailsScreen from '../lumina4.0/features/eventScreenFeatures/extraScreens/EventDetailsScreen';
-import WeeklyCalendarScreen from '../lumina4.0/features/calendarScreenFeatures/extraScreens/weeklyCalendarScreen';
-
-//filled icons
-import FilledHomeIcon from '/Users/thebenzsecrets/lumina4.0/assets/filledIcons/icons8-home-48 (3).png';
-import FilledCalendarIcon from  '/Users/thebenzsecrets/lumina4.0/assets/filledIcons/icons8-calendar-48 (2).png';
-import FilledTrackerIcon from '/Users/thebenzsecrets/lumina4.0/assets/filledIcons/icons8-constellation-50 (3).png';
-import FilledEventIcon from '/Users/thebenzsecrets/lumina4.0/assets/filledIcons/icons8-three-people-48 (2).png';
-import FilledProfileIcon from '/Users/thebenzsecrets/lumina4.0/assets/filledIcons/icons8-person-48 (1).png';
-
-//unfilled icons
-import UnfilledHomeIcon from '/Users/thebenzsecrets/lumina4.0/assets/unfilledIcons/icons8-home-48 (2).png';
-import UnfilledCalendarIcon from '/Users/thebenzsecrets/lumina4.0/assets/unfilledIcons/icons8-calendar-48 (3).png';
-import UnfilledTrackerIcon from '/Users/thebenzsecrets/lumina4.0/assets/unfilledIcons/icons8-constellation-50 (2).png';
-import UnfilledEventIcon from '/Users/thebenzsecrets/lumina4.0/assets/unfilledIcons/icons8-three-people-48 (3).png';
-import UnfilledProfileIcon from '/Users/thebenzsecrets/lumina4.0/assets/unfilledIcons/icons8-person-48.png';
+import IntroScreen from './screens/introScreen.js';
+import HomeScreen from './screens/homeScreen';
+import CalendarScreen from './screens/calendarScreen';
+import TrackerScreen from './screens/trackerScreen';
+import EventScreen from './screens/eventScreen';
+import ProfileScreen from './screens/profileScreen';
+import EventDetailsScreen from './features/eventScreenFeatures/extraScreens/EventDetailsScreen';
+import WeeklyCalendarScreen from './features/calendarScreenFeatures/extraScreens/weeklyCalendarScreen';
 
 Amplify.configure(config);
+
+const FilledHomeIcon = require('./assets/filledIcons/icons8-home-48 (3).png');
+const FilledCalendarIcon = require('./assets/filledIcons/icons8-calendar-48 (2).png');
+const FilledTrackerIcon = require('./assets/filledIcons/icons8-constellation-50 (3).png');
+const FilledEventIcon = require('./assets/filledIcons/icons8-three-people-48 (2).png');
+const FilledProfileIcon = require('./assets/filledIcons/icons8-person-48 (1).png');
+
+const UnfilledHomeIcon = require('./assets/unfilledIcons/icons8-home-48 (2).png');
+const UnfilledCalendarIcon = require('./assets/unfilledIcons/icons8-calendar-48 (3).png');
+const UnfilledTrackerIcon = require('./assets/unfilledIcons/icons8-constellation-50 (2).png');
+const UnfilledEventIcon = require('./assets/unfilledIcons/icons8-three-people-48 (3).png');
+const UnfilledProfileIcon = require('./assets/unfilledIcons/icons8-person-48.png');
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();

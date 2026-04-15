@@ -4,7 +4,7 @@ import { StyleSheet, SafeAreaView, Text, ImageBackground, View, Image, Touchable
 export default function HomeScreen() {
   return (
     <ImageBackground
-        source={require('/Users/thebenzsecrets/lumina4.0/assets/homeScreenImages/HomePageBackground.png')}
+        source={require('../assets/homeScreenImages/HomePageBackground.png')}
         style={styles.background}
       >
         <View style={styles.moonAndWeatherContainer}>

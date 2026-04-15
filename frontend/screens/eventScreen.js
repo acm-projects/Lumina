@@ -9,17 +9,17 @@ import {
   Image,
   TextInput
 } from 'react-native';
-import StarGazingCarousel from '/Users/thebenzsecrets/lumina4.0/features/eventScreenFeatures/carousels/stargazingCarousel.js';
-import PlanetCarousel from '/Users/thebenzsecrets/lumina4.0/features/eventScreenFeatures/carousels/planetCarousel.js';
-import LunarSolarCarousel from '/Users/thebenzsecrets/lumina4.0/features/eventScreenFeatures/carousels/lunar_solarCarousel.js';
-import { starEvents } from '/Users/thebenzsecrets/lumina4.0/assets/eventScreenData/stargazing.js';
-import { planetEvents } from '/Users/thebenzsecrets/lumina4.0/assets/eventScreenData/planets.js';
-import { lunarAndSolarEvents } from '/Users/thebenzsecrets/lumina4.0/assets/eventScreenData/lunarAndSolar.js';
+import StarGazingCarousel from '../features/eventScreenFeatures/carousels/stargazingCarousel.js';
+import PlanetCarousel from '../features/eventScreenFeatures/carousels/planetCarousel.js';
+import LunarSolarCarousel from '../features/eventScreenFeatures/carousels/lunar_solarCarousel.js';
+import { starEvents } from '../assets/eventScreenData/stargazing.js';
+import { planetEvents } from '../assets/eventScreenData/planets.js';
+import { lunarAndSolarEvents } from '../assets/eventScreenData/lunarAndSolar.js';
 
 export default class EventScreen extends React.Component {
     render() {
         return (
-            <ImageBackground source={require('/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/EventBackground.jpeg')} style={styles.container}>
+            <ImageBackground source={require('../assets/eventScreenImages/EventBackground.jpeg')} style={styles.container}>
               <SafeAreaView>
                 <ScrollView>
                   <View>

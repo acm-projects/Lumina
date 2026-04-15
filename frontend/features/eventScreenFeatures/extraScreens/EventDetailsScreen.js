@@ -16,11 +16,11 @@ const EventDetailsScreen = ({navigation, route}) => {
 
     return (
         <GestureHandlerRootView>
-        <ImageBackground source={require("/Users/thebenzsecrets/lumina4.0/assets/eventScreenImages/EventBackground.jpeg")} style={styles.container}>
+        <ImageBackground source={require("../../../assets/eventScreenImages/EventBackground.jpeg")} style={styles.container}>
             <SafeAreaView>
                 {/* <View>
                     <View style={styles.searchContainer}>
-                        <Image style={styles.usernameIcon} source={require('/Users/thebenzsecrets/lumina4.0/assets/icons8-search-30.png')}/>
+                        <Image style={styles.usernameIcon} source={require('../../../assets/icons8-search-30.png')}/>
                         <TextInput style={styles.textInput} placeholderTextColor="#0F1630"/>
                     </View>
                 </View> */}
